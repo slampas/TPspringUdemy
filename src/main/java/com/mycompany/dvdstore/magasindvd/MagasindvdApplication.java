@@ -14,12 +14,10 @@ public class MagasindvdApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MagasindvdApplication.class, args);
 
-		
+		/*Ajout du titre et genre du film*/
 		Movie movie = new Movie();
 		String genre;
 		String titre;
-		
-
 		System.out.println("--------------------------");
 		System.out.println("sasir le titre du film à ajouter ");
 		System.out.println("--------------------------");
