@@ -6,20 +6,12 @@ import com.mycompany.dvdstore.magasindvd.repository.MovieRepositoryInterface;
 
 public class MovieService implements MovieServiceInterface {
 
-    private MovieRepositoryInterface movieRepositoryInterface ;
-    //private MovieRepository movieRepository = new MovieRepository();
-    
-    
-    public void registerMovie(Movie movie){
-        movieRepositoryInterface.add(movie); 
+    private MovieRepositoryInterface movieRepositoryInterface;
+    // private MovieRepository movieRepository = new MovieRepository();
 
-    
+    public void registerMovie(Movie movie) {
+        movieRepositoryInterface.add(movie);
 
-        
     }
 
-
-
-
-    
 }

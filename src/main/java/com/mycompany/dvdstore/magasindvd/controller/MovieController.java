@@ -7,14 +7,13 @@ import com.mycompany.dvdstore.magasindvd.entity.Movie;
 //import com.mycompany.dvdstore.magasindvd.service.MovieService;
 import com.mycompany.dvdstore.magasindvd.service.MovieServiceInterface;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class MovieController {
-
+	@Autowired
 	private MovieServiceInterface movieService;
-	// private MovieServiceInterface movieServiceInterface ;
-	// private MovieService movieService = new MovieService();
-	// private GoLiveMovieRepository goLiveMovieRepository = new
-	// GoLiveMovieRepository();
 
+	
 	public void addUsingConsole() {
 
 		System.out.println("What is the movie title?");
@@ -27,24 +26,6 @@ public class MovieController {
 		movie.setTitle(title);
 		movie.setGenre(genre);
 		movieService.registerMovie(movie);
-
-		/* Ajout du titre et genre du film */
-
-		/**
-		 * Movie movie = new Movie(); String genre; String titre;
-		 * System.out.println("--------------------------"); System.out.println("sasir
-		 * le titre du film à ajouter ");
-		 * System.out.println("--------------------------"); Scanner sc = new
-		 * Scanner(System.in); titre = sc.nextLine(); movie.setTitle(titre);
-		 * System.out.println("--------------------------"); System.out.println("sasir
-		 * le genre du film à ajouter ");
-		 * System.out.println("--------------------------"); genre = sc.nextLine();
-		 * movie.setGenre(genre); sc.close();
-		 * 
-		 * 
-		 * //movieServiceInterface.registerMovie(movie);
-		 * ovieServiceInterface.registerMovie(movie); goLiveMovieRepository.add(movie);
-		 */
 
 	}
 
