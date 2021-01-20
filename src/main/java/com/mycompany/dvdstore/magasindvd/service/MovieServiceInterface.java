@@ -4,5 +4,5 @@ import com.mycompany.dvdstore.magasindvd.entity.Movie;
 
 public interface MovieServiceInterface {
     
-    public void registerMovie(Movie movie);
+     void registerMovie(Movie movie);
 }

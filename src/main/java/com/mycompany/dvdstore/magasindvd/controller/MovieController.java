@@ -9,13 +9,34 @@ import com.mycompany.dvdstore.magasindvd.service.MovieServiceInterface;
 
 public class MovieController {
 
-
-	private MovieServiceInterface movieServiceInterface ;
+	private MovieServiceInterface movieService;
+	//private MovieServiceInterface movieServiceInterface ;
     //private MovieService movieService = new MovieService();
     private GoLiveMovieRepository goLiveMovieRepository = new GoLiveMovieRepository();
 
     public void addUsingConsole(){
-        		/*Ajout du titre et genre du film*/
+	
+	
+	
+	
+		System.out.println( "What is the movie title?" );
+        Scanner scanner=new Scanner(System.in);
+        String title=scanner.nextLine();
+        System.out.println( "What is the movie genre?" );
+        String genre=scanner.nextLine();
+        Movie movie=new Movie();
+        movie.setTitle(title);
+        movie.setGenre(genre);
+        movieService.registerMovie(movie);
+	
+	
+	
+	
+	
+	
+		/*Ajout du titre et genre du film*/
+				
+				/** 
 		Movie movie = new Movie();
 		String genre;
 		String titre;
@@ -33,8 +54,9 @@ public class MovieController {
 		sc.close();
 
 		
-        movieServiceInterface.registerMovie(movie);
-        goLiveMovieRepository.add(movie);
+		//movieServiceInterface.registerMovie(movie);
+		ovieServiceInterface.registerMovie(movie);
+        goLiveMovieRepository.add(movie);*/
 
     }
     
