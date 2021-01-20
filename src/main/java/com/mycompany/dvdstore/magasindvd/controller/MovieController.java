@@ -1,10 +1,7 @@
 package com.mycompany.dvdstore.magasindvd.controller;
 
 import java.util.Scanner;
-
 import com.mycompany.dvdstore.magasindvd.entity.Movie;
-//import com.mycompany.dvdstore.magasindvd.repository.GoLiveMovieRepository;
-//import com.mycompany.dvdstore.magasindvd.service.MovieService;
 import com.mycompany.dvdstore.magasindvd.service.MovieServiceInterface;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +10,6 @@ public class MovieController {
 	@Autowired
 	private MovieServiceInterface movieService;
 
-	
 	public void addUsingConsole() {
 
 		System.out.println("What is the movie title?");
