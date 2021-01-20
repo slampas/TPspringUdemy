@@ -5,12 +5,13 @@ import java.util.Scanner;
 import com.mycompany.dvdstore.magasindvd.entity.Movie;
 import com.mycompany.dvdstore.magasindvd.repository.GoLiveMovieRepository;
 import com.mycompany.dvdstore.magasindvd.service.MovieService;
+import com.mycompany.dvdstore.magasindvd.service.MovieServiceInterface;
 
 public class MovieController {
 
 
-
-    private MovieService movieService = new MovieService();
+	private MovieServiceInterface movieServiceInterface ;
+    //private MovieService movieService = new MovieService();
     private GoLiveMovieRepository goLiveMovieRepository = new GoLiveMovieRepository();
 
     public void addUsingConsole(){
@@ -32,7 +33,7 @@ public class MovieController {
 		sc.close();
 
 		
-        movieService.registerMovie(movie);
+        movieServiceInterface.registerMovie(movie);
         goLiveMovieRepository.add(movie);
 
     }

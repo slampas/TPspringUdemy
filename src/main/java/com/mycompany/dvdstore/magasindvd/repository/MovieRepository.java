@@ -5,14 +5,14 @@ import java.util.List;
 
 import com.mycompany.dvdstore.magasindvd.entity.Movie;
 
-public class MovieRepository {
+public class MovieRepository implements MovieRepositoryInterface {
 
     private List <Movie> movies = new ArrayList<>();
     public void add(Movie e){
         movies.add(e) ;
-        System.out.println("---------------------------");
-        System.out.println("the movie: "+e.getTitle()+",added with succes"); 
-        System.out.println("---------------------------");       
+        System.out.println("***********************************************");
+        System.out.println("Thnk-you the movie: "+e.getTitle()+",added with succes"); 
+        System.out.println("***********************************************");       
 
     }
     
