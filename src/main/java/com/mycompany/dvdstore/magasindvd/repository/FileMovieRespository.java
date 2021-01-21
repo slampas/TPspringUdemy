@@ -5,7 +5,7 @@ import java.io.IOException;
 
 import com.mycompany.dvdstore.magasindvd.entity.Movie;
 
-public class GoLiveMovieRepository implements MovieRepositoryInterface {
+public class FileMovieRespository implements MovieRepositoryInterface {
 
 
 

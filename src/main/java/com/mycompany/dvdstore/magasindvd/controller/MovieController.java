@@ -2,16 +2,18 @@ package com.mycompany.dvdstore.magasindvd.controller;
 
 import java.util.Scanner;
 import com.mycompany.dvdstore.magasindvd.entity.Movie;
+import com.mycompany.dvdstore.magasindvd.service.DefaultMovieService;
 import com.mycompany.dvdstore.magasindvd.service.MovieServiceInterface;
 
-import org.springframework.beans.factory.annotation.Autowired;
 
 public class MovieController {
-	@Autowired
-	private MovieServiceInterface movieService;
+	
+	private MovieServiceInterface movieServiceInterface;
 
 	public void addUsingConsole() {
 
+		DefaultMovieService movieService;
+		
 		System.out.println("What is the movie title?");
 		Scanner scanner = new Scanner(System.in);
 		String title = scanner.nextLine();
@@ -21,8 +23,18 @@ public class MovieController {
 		Movie movie = new Movie();
 		movie.setTitle(title);
 		movie.setGenre(genre);
-		movieService.registerMovie(movie);
+		
+		movieServiceInterface.registerMovie(movie);
 
 	}
+
+	public MovieServiceInterface getMovieServiceInterface() {
+		return movieServiceInterface;
+	}
+
+	public void setMovieServiceInterface(MovieServiceInterface movieServiceInterface) {
+		this.movieServiceInterface = movieServiceInterface;
+	}
+	
 
 }
