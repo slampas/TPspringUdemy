@@ -1,23 +1,16 @@
 package com.mycompany.dvdstore.magasindvd;
 
 import com.mycompany.dvdstore.magasindvd.controller.MovieController;
-import com.mycompany.dvdstore.magasindvd.repository.FileMovieRespository;
-import com.mycompany.dvdstore.magasindvd.service.DefaultMovieService;
-
-//import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @SpringBootApplication
 public class MagasindvdApplication {
 
         public static void main(String[] args) {
-
-                MovieController movieController = new MovieController();
-                FileMovieRespository goLiveMovieRepository = new FileMovieRespository();
-                DefaultMovieService movieService = new DefaultMovieService();
-
-                movieController.setMovieServiceInterface(movieService);
-                movieService.setMovieRepositoryInterface(goLiveMovieRepository);
+                ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+                MovieController movieController = context.getBean(MovieController.class);
                 movieController.addUsingConsole();
 
         }
