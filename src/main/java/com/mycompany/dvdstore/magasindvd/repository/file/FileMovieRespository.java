@@ -1,14 +1,19 @@
-package com.mycompany.dvdstore.magasindvd.repository;
+package com.mycompany.dvdstore.magasindvd.repository.file;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-
 import com.mycompany.dvdstore.magasindvd.entity.Movie;
+import com.mycompany.dvdstore.magasindvd.repository.MovieRepositoryInterface;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Repository;
+
+@Repository
 public class FileMovieRespository implements MovieRepositoryInterface {
 
-//FileWriter("C:\\Users\\33650\\OneDrive\\Bureau\\movies.txt",true);
+
+@Value("${movies.file.location}")
 private File file;
 
 	public File getFile() {

@@ -7,18 +7,17 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:annotation-config/>
+    <context:property-placeholder location="classpath:application.properties"/>
+    <context:component-scan base-package="com.mycompany.dvdstore.magasindvd.controller" />
+    <context:component-scan base-package="com.mycompany.dvdstore.magasindvd.service" />
+    <context:component-scan base-package="com.mycompany.dvdstore.magasindvd.repository.file" />
 
-    <bean id="movieRepository" class="com.mycompany.dvdstore.magasindvd.repository.FileMovieRespository">
-        <property name="file" value="C:\\Users\\33650\\OneDrive\\Bureau\\movies.csv"/>
-    </bean>    
+    
+   <!--
+         <bean id="movieRepository" class="com.mycompany.dvdstore.magasindvd.repository.FileMovieRespository"/>
+   <bean id="movieService" class="com.mycompany.dvdstore.magasindvd.service.DefaultMovieService"/>
+   <bean id="movieController" class="com.mycompany.dvdstore.magasindvd.controller.MovieController"/>
+   
 
-    <bean id="movieService" class="com.mycompany.dvdstore.magasindvd.service.DefaultMovieService"/>
-        
-    </bean>
-
-    <bean id="movieController" class="com.mycompany.dvdstore.magasindvd.controller.MovieController"/>
-        
-    </bean>
-
-
-    </beans>
+   -->
+</beans>

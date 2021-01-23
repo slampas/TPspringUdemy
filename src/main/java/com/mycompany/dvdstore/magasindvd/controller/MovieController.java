@@ -5,8 +5,13 @@ import com.mycompany.dvdstore.magasindvd.entity.Movie;
 
 import com.mycompany.dvdstore.magasindvd.service.MovieServiceInterface;
 
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+@Controller
 public class MovieController {
 
+	@Autowired
 	private MovieServiceInterface movieServiceInterface;
 
 	public void addUsingConsole() {

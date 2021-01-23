@@ -1,10 +1,14 @@
 package com.mycompany.dvdstore.magasindvd.service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.mycompany.dvdstore.magasindvd.entity.Movie;
 import com.mycompany.dvdstore.magasindvd.repository.MovieRepositoryInterface;
 
+@Service
 public class DefaultMovieService implements MovieServiceInterface {
 
+    @Autowired
     private MovieRepositoryInterface movieRepositoryInterface;
 
 
